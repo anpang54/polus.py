@@ -1,5 +1,5 @@
 
-> [!INFO]
+> [!NOTE]
 > This is still being made, the first version isn't even out yet.
 
 ## polus.py
