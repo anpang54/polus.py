@@ -11,7 +11,7 @@ import json
 
 # CONSTANTS
 
-_version = "0.1.0"
+_version = "0.0.1a"
 
 _url = "https://polus.wiki/w/rest.php/v1"
 
