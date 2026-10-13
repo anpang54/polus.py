@@ -1,5 +1,5 @@
 
-import polus
+import astronomy
 
-jupiter = polus.Article("jupiter")
+jupiter = astronomy.Article("jupiter")
 print(jupiter.read_raw())

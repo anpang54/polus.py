@@ -4,11 +4,11 @@ requires = ["setuptools >= 77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "polus.py"
-description = "A library for reading from https://polus.wiki/."
+name = "astronomy.py"
+description = "A library for reading from https://astronomy.wiki/."
 version = "0.0.1a"
 license = "MIT"
 requires-python = ">=3.10"
 
 [tool.setuptools]
-py-modules = ["polus"]
+py-modules = ["astronomy"]

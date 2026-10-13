@@ -1,5 +1,5 @@
 
-# https://github.com/anpang54/polus.py
+# https://github.com/anpang54/astronomy.py
 # (c) 2026 Anpang, MIT license
 
 
@@ -13,10 +13,10 @@ import json
 
 _version = "0.0.1a"
 
-_url = "https://polus.wiki/w/rest.php/v1"
+_url = "https://astronomy.wiki/w/rest.php/v1"
 
 _headers = {
-    "User-Agent": f"polus.py/{_version}"
+    "User-Agent": f"astronomy.py/{_version}"
 }
 
 
@@ -33,7 +33,7 @@ def _http_get(url, parse_json=False):
 
 # CLASSES
 
-class PolusException(Exception):
+class AstronomyWikiException(Exception):
     pass
 
 class Article:
@@ -43,10 +43,10 @@ class Article:
 
     def __str__(self):
         if not hasattr(self, "id"):
-            raise PolusException("Article doesn't have an ID.") 
+            raise AstronomyWikiException("Article doesn't have an ID.") 
         return f"<Article {self.id}>"
     
     def read_raw(self):
         if not hasattr(self, "id"):
-            raise PolusException("Article doesn't have an ID.") 
+            raise AstronomyWikiException("Article doesn't have an ID.") 
         return _http_get(f"{_url}/page/{self.id}", True)["source"]
